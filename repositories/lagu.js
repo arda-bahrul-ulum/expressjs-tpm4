@@ -62,4 +62,19 @@ async function deleteLagu(id) {
   }
 }
 
-export { createLagu, getLagu, updateLagu, deleteLagu };
+async function createUser(username, pass) {
+  try {
+    // let query = "INSERT INTO user (username, password) values ('"+username+"','"+pass+"')";
+    // console.log(query);
+    // const [result] = await dbPool.query(query)
+    let query = "INSERT INTO user (username,password) values (?,?)";
+    const [result] = await dbPool.query(query, [username, pass]);
+    // console.log(result);
+    console.log(result.affectedRows);
+    return result.affectedRows;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export { createLagu, getLagu, updateLagu, deleteLagu, createUser };
