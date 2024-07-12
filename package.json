@@ -1,0 +1,16 @@
+{
+  "name": "tugas-4",
+  "version": "1.0.0",
+  "description": "tugas praktik mandiri 4",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "arda",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.10.2"
+  }
+}
